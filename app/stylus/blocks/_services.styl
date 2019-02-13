@@ -2,19 +2,39 @@
   &--offer
     margin 63px 0 0
 
+    @media $desktopMax
+      margin-top 42px
+
   &--weekdays
     margin 63px 0 114px
 
   .container
     padding 0 117px
 
+    @media $desktopMax
+      padding 0 96px
+
+    @media $tLandscapeMax
+      padding 0 40px
+
+    @media $tPortraitMax
+      padding 0
+
   &__row
     display flex
     flex-wrap wrap
     align-items flex-start
     justify-content center
-    //margin 0 -40px 65px
-    margin 0 -40px 0
+    margin 0 -40px
+
+    @media $desktopMax
+      margin 0 -34px
+
+    @media $tLandscapeMax
+      margin 0 -20px
+
+    @media $mLandscapeMax
+      margin 0
 
   &__item
     position relative
@@ -27,6 +47,19 @@
     border-bottom-right-radius 169px
     padding 36px 35px
     z-index 1
+
+    @media $desktopMax
+      width calc(100%/3 - 68px)
+      margin 0 34px
+      padding 40px 31px
+
+    @media $tLandscapeMax
+      width calc(100%/3 - 40px)
+      margin 0 20px
+
+    @media $mLandscapeMax
+      width 100%
+      margin 0 0 110px
 
     &--vert-mirror
       border-top-left-radius 169px
@@ -42,6 +75,10 @@
       justify-content center
       align-items flex-end
       margin-bottom 25px
+
+      @media $desktopMax
+        height 94px
+        margin-bottom 21px
 
     &-img
       max-width 100%
@@ -70,9 +107,8 @@
         background-size contain
 
       @media $desktopMax
-        font-size 24px
-        line-height 30px
-        margin 88px 0 46px
+        font-size 18px
+        line-height 24px
 
     &-data
       text-align left
@@ -87,6 +123,9 @@
 
         li + li
           margin-top 23px
+
+          @media $desktopMax
+            margin-top 22px
 
     &-course
       margin-top 28px
@@ -116,6 +155,14 @@
       font-size 22px
       margin 44px auto -110px
 
+      @media $desktopMax
+        width 129px
+        height 129px
+        border-radius 65px
+        font-size 18px
+        line-height 18px
+        margin 34px auto -94px
+
       &--yellow
         background-color #edba09
 
@@ -130,12 +177,23 @@
         font-weight 700
         font-size 20px
         text-decoration line-through
+
+        @media $desktopMax
+          font-size 16px
+          line-height 16px
+
         span
           font-size 16px
+
+          @media $desktopMax
+            font-size 14px
 
       &-number
         span
           font-size 18px
+
+          @media $desktopMax
+            font-size 14px
 
         .warn
           display block
@@ -158,11 +216,21 @@
     margin-bottom 35px
     z-index 1
 
+    @media $desktopMax
+      margin-top 123px
+      font-size 16px
+
+    @media $mLandscapeMax
+      margin-top 75px
+
     &-text
       background url('../../../../static/img/sale-back.png') no-repeat center
       background-size 100% 100%
       padding 43px 36px 40px
       letter-spacing 0.027em
+
+      @media $desktopMax
+        padding 38px 34px 32px
 
     &-decor
       position absolute
@@ -173,6 +241,12 @@
       height 228px
       background url('../../../../static/img/big-decor.png') no-repeat center
       z-index -1
+
+      @media $desktopMax
+        width 124px
+        height 190px
+        top -75px
+        background-size contain
 
   &__warning
     display flex

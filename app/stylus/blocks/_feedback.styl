@@ -1,11 +1,31 @@
 .feedback
   margin-top 113px
 
+  @media $desktopMax
+    margin-top 91px
+
+  @media $desktopMax
+    margin-top 50px
+
   &__row
     display flex
     justify-content space-between
     margin 0 -70px
-    width cacl(100% + 140px)
+    width calc(100% + 140px)
+
+    @media $desktopMax
+      margin 0 -58px
+      width calc(100% + 116px)
+
+    @media $mLandscapeMax
+      margin 0 -10px
+      width calc(100% + 20px)
+
+    @media $mPortraitMax
+      margin 0
+      width 100%
+      flex-direction column
+      justify-content center
 
   &__item
     display flex
@@ -19,6 +39,23 @@
     border-radius 50%
     padding-top 11px
     z-index 1
+
+    @media $desktopMax
+      width 174px
+      height 174px
+      margin 0 58px
+
+    @media $mLandscapeMax
+      margin 0 10px
+
+    @media $mPortraitMax
+      align-items center
+      margin 0 auto 40px
+      width 218px
+      height 218px
+
+      &:last-child
+        margin-bottom 0
 
     &:hover
       &:before
@@ -42,14 +79,45 @@
       font-weight 400
       line-height 22px
 
+      @media $desktopMax
+        font-size 14px
+        line-height 16px
+
+      @media $mPortraitMax
+        font-size 16px
+        line-height 22px
+
     &-data
       color #333
       font-size 20px
       font-weight 700
       line-height 24px
 
+      @media $desktopMax
+        font-size 16px
+        line-height 22px
+
+      @media $mLandscapeMax
+        line-height 18px
+
+      @media $mPortraitMax
+        font-size 20px
+        line-height 24px
+
       a
         color #333
         font-size 20px
         font-weight 700
         line-height 24px
+
+        @media $desktopMax
+          font-size 16px
+          line-height 22px
+
+        @media $mLandscapeMax
+          font-size 14px
+          line-height 16px
+
+        @media $mPortraitMax
+          font-size 20px
+          line-height 24px

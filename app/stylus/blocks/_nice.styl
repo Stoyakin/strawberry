@@ -10,6 +10,17 @@
   margin-bottom 149px
   overflow hidden
 
+  @media $desktopMax
+    margin-top 52px
+    margin-bottom 98px
+    padding-top 89px
+    padding-bottom 98px
+    min-height 520px
+
+  @media $mLandscapeMax
+    padding-top 100px
+    padding-bottom 90px
+
   &--home
     margin-top 114px
     margin-bottom 118px
@@ -24,6 +35,15 @@
   .container
     padding 0 117px
 
+    @media $desktopMax
+      padding 0 96px
+
+    @media $tLandscapeMax
+      padding 0 40px
+
+    @media $tPortraitMax
+      padding 0
+
   &:before
     @extend .before
     left 0
@@ -32,9 +52,10 @@
     height 57px
     background url('../../../../static/img/wave4.png') no-repeat center
     background-size cover
-    z-index 0
+    z-index 1
 
-    //@media $desktopMax
+    @media $desktopMax
+      height 40px
 
   &:after
     @extend .after
@@ -44,9 +65,10 @@
     height 113px
     background url('../../../../static/img/wave5.png') no-repeat center
     background-size cover
-    z-index 0
+    z-index 1
 
-    //@media $desktopMax
+    @media $desktopMax
+      height 80px
 
   &__row
     display flex
@@ -57,23 +79,42 @@
   &--hero
     background-color #fff4e1
 
+  &__info, &__decor-overimg
+    width calc(50% - 15px)
+
   &__info
     position relative
     z-index 1
 
-  &__info, &__decor-overimg
-    width calc(50% - 15px)
+    @media $mLandscapeMax
+      margin-bottom 80px
+      width 100%
+      text-align center
 
   &__title
     text-align left
     margin-bottom 0
 
+    @media $desktopMax
+      line-height 30px
+      padding-bottom 26px
+
+    @media $mLandscapeMax
+      text-align center
+
     &:before
       left 0
       transform none
 
+      @media $mLandscapeMax
+        left 50%
+        transform translateX(-50%)
+
   &__btn
     margin-top 55px
+
+    @media $desktopMax
+      margin-top 50px
 
   &__text
     color #5f5f5f
@@ -86,8 +127,22 @@
     top 60px
     left 22px
 
+    @media $desktopMax
+      height 336px
+      top 26px
+      left 44px
+
+    @media $tPortraitMax
+      left 0
+
+    @media $mLandscapeMax
+      height 196px
+      margin 0 auto
+      top 0
+
   &__decor-img
     max-width 100%
+    max-height 100%
 
   &__decor
     position relative
@@ -96,6 +151,7 @@
 
     &-item
       position absolute
+      background-size contain
 
       &--el1
         left -50px
@@ -104,12 +160,23 @@
         height 95px
         background-image url('../../../../static/img/clouds/clouds.png')
 
+        @media $desktopMax
+          top 18px
+          width 148px
+          height 68px
+
       &--el2
         left 59vw
         top 37px
         width 187px
         height 106px
         background-image url('../../../../static/img/clouds/clouds2.png')
+
+        @media $desktopMax
+          width 134px
+          height 76px
+          left 62vw
+          top 10px
 
       &--el3
         left 37vw
@@ -118,12 +185,23 @@
         height 105px
         background-image url('../../../../static/img/clouds/clouds3.png')
 
+        @media $desktopMax
+          top 140px
+          width 155px
+          height 75px
+
       &--el4
         left 85vw
         top 157px
         width 176px
         height 81px
         background-image url('../../../../static/img/clouds/clouds4.png')
+
+        @media $desktopMax
+          width 126px
+          height 58px
+          left 87vw
+          top 96px
 
       &--el5
         left 13vw
@@ -132,6 +210,12 @@
         height 106px
         background-image url('../../../../static/img/clouds/clouds5.png')
 
+        @media $desktopMax
+          width 136px
+          height 76px
+          left 12vw
+          top 270px
+
       &--el6
         left 57vw
         top 362px
@@ -139,6 +223,12 @@
         height 113px
         background-image url('../../../../static/img/clouds/clouds6.png')
         z-index 1
+
+        @media $desktopMax
+          width 178px
+          height 81px
+          left 59vw
+          top 242px
 
       &--el7
         left 28vw

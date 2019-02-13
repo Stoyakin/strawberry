@@ -1,6 +1,9 @@
 .price-table
   margin-bottom 114px
 
+  @media $desktopMax
+    margin-bottom 95px
+
   &__top
     position relative
     border-radius 38px
@@ -9,6 +12,9 @@
     padding 32px 100px 25px 30px
     z-index 2
     margin-bottom -35px
+
+    @media $desktopMax
+      padding 25px 80px 17px 30px
 
   &__btn-toggle
     display block
@@ -25,6 +31,10 @@
     padding 0
     z-index 1
 
+    @media $desktopMax
+      width 50px
+      height 50px
+
     &:before, &:after
       content ''
       position absolute
@@ -34,6 +44,10 @@
       background-color white
       left 27px
       top 31px
+
+      @media $desktopMax
+        left 22px
+        top 25px
 
     &:after
       transform rotate(-90deg)

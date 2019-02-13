@@ -4,14 +4,24 @@
   & + &
     margin-top 112px
 
+    @media $desktopMax
+      margin-top 93px
+
   & +.text
     margin-top 107px
+
+    @media $desktopMax
+      margin-top 89px
 
   &__wrap
     max-width 565px
     margin 0 auto
 
+    @media $desktopMax
+      max-width 432px
+
   &__title
+    position relative
     font-size 24px
     line-height 30px
     padding-bottom 17px
@@ -19,6 +29,9 @@
     font-weight 700
     text-transform uppercase
     text-align center
+
+    @media $tPortraitMax
+      margin-bottom 30px
 
     &:before
       @extend .before
@@ -29,11 +42,6 @@
       height 4px
       background url('../../../../static/img/svg/flood.svg') no-repeat center
       background-size cover
-
-    @media $desktopMax
-      font-size 18px
-      line-height 24px
-      margin 38px 0 25px
 
   &__content
     margin-top 40px
