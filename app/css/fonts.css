@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Verdana';
+  src: url('../../../../static/fonts/Verdana.eot');
+  src: url('../../../../static/fonts/Verdana.eot?#iefix') format('embedded-opentype'),
+      url('../../../../static/fonts/Verdana.woff2') format('woff2'),
+      url('../../../../static/fonts/Verdana.woff') format('woff'),
+      url('../../../../static/fonts/Verdana.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url('../../../../static/fonts/Arial-Black.eot');
+  src: url('../../../../static/fonts/Arial-Black.eot?#iefix') format('embedded-opentype'),
+      url('../../../../static/fonts/Arial-Black.woff2') format('woff2'),
+      url('../../../../static/fonts/Arial-Black.woff') format('woff'),
+      url('../../../../static/fonts/Arial-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fregat';
+  src: url('../../../../static/fonts/Fregat.eot');
+  src: url('../../../../static/fonts/Fregat.eot?#iefix') format('embedded-opentype'),
+      url('../../../../static/fonts/Fregat.woff2') format('woff2'),
+      url('../../../../static/fonts/Fregat.woff') format('woff'),
+      url('../../../../static/fonts/Fregat.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fregat';
+  src: url('../../../../static/fonts/Fregat-Bold.eot');
+  src: url('../../../../static/fonts/Fregat-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../../../../static/fonts/Fregat-Bold.woff2') format('woff2'),
+      url('../../../../static/fonts/Fregat-Bold.woff') format('woff'),
+      url('../../../../static/fonts/Fregat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+

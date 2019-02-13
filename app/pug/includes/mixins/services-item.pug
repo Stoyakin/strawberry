@@ -1,0 +1,24 @@
+mixin services-item(data)
+  each item in data
+    +e('article').item(class=item.dopClass ? item.dopClass : '')
+      +e.item-overimg
+        +e('img')(src=item.img alt="").item-img
+      +e.item-info
+        +e('p').item-title !{item.title}
+        +e.item-data 
+          .text !{item.data}
+
+        if (item.course)
+          +e.item-course #{item.course.title}
+            time #{item.course.date}
+
+        if (item.price)
+          +e.item-price(class=item.price.color ? item.price.color : '')
+            if (item.price.old)
+              +e('p').item-price-old #{item.price.old}
+                span  руб.
+
+            +e('p').item-price-number #{item.price.number}
+              span  руб.
+              if (item.price.warn)
+                span.warn #{item.price.warn}

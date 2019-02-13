@@ -1,0 +1,39 @@
++b('footer').footer
+    .container
+      +e.row.--top
+        +e.row-left
+          +e('a')(href="/").logo
+            +e('img')(src="static/img/logo.png" alt="").logo-img
+          
+        +b('nav').nav.--footer
+          +e('ul').list
+            +e('li').list-item
+              +e('a')(href="#").list-href Услуги
+            +e('li').list-item
+              +e('a')(href="#").list-href О нас
+            +e('li').list-item
+              +e('a')(href="#").list-href Наши новости
+            +e('li').list-item
+              +e('a')(href="#").list-href Контакты
+
+        +e.row-right
+          +e('a')(href="tel:89514881035").phone +7 (951) 488-10-35
+
+      +e.row.--bottom
+        +e.row-left
+          +e('p').coopy Все права защищены. <br>&copy «Земляника» 2019
+
+        +b('ul').social
+          +e('li').item
+            +e('a')(href="#").item-href.--vk
+          +e('li').item
+            +e('a')(href="#").item-href.--inst
+
+        +e.row-right
+          +e('a')(href="https://www.dextra.ru/" target="_blank").dev
+            span dextra
+            | Разработка<br>сайта
+            
+script(type="text/javascript" src="static/js/vendor.js")
+script(type="text/javascript", src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+script(type="text/javascript" src="../app/js/common.js")

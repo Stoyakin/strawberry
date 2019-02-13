@@ -1,0 +1,46 @@
+include includes/bemto/bemto.pug
+include includes/__mixins.pug
+
+doctype html
+html(lang="ru")
+  - var title = "Контакты"
+  include includes/__head
+
+  body
+    .wrapper.wrapper--inside
+      include includes/__header
+        
+      main.main
+        .container
+
+          +breads([
+            { name: 'Главная' }
+          ])
+
+          h1.main__title Контакты
+
+          +b('section').contacts
+            +e.info
+              +e.info-item.--address
+                +e('p').info-item-title Наш Адрес
+                +e.info-item-data
+                  address Копейск, пр.Победы, 17А
+
+              +e.info-item.--phone
+                +e('p').info-item-title телефон
+                +e.info-item-data
+                  a(href="tel:89514881035") +7 (951) 488-10-35
+
+              +e.info-item.--social
+                +e('p').info-item-title Мы в социальных сетях
+                +e.info-item-data
+                  +b('ul').social
+                    +e('li').item
+                      +e('a')(href="#").item-href.--vk
+                    +e('li').item
+                      +e('a')(href="#").item-href.--inst
+
+            +e.map.js-map#yaMap(data-coords="55.116433, 61.607190")
+            
+
+      include includes/__footer

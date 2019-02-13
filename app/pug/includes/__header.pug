@@ -1,0 +1,25 @@
++b('header').header
+    .container
+      +e.row
+        +e('a')(href="/").logo
+          +e('span').logo-overimg
+            +e('img')(src="static/img/logo.png").logo-img
+          +e('span').logo-title Для активных детей и заботливых родителей
+
+        +b('nav').nav
+          +e('button').burger.js-burger
+            span
+              i
+
+          +e('ul').list
+            +e('li').list-item
+              +e('a')(href="#").list-href Услуги
+            +e('li').list-item
+              +e('a')(href="#").list-href О нас
+            +e('li').list-item
+              +e('a')(href="#").list-href Наши новости
+            +e('li').list-item
+              +e('a')(href="#").list-href Контакты
+
+        +e('address').address Мы находимся
+          span Копейск, пр.Победы, 17А

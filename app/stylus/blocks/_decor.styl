@@ -1,0 +1,65 @@
+.decor
+  position relative
+  width 100%
+  height 0
+
+  @media $tLandscapeMax
+    display none
+
+  &__item
+    display block
+    position absolute
+    background-position center
+    background-repeat no-repeat
+    transition opacity .4s, transform .4s
+    transform scale(.5)
+    opacity 0
+
+    @media $desktopMax
+      transform scale(.3)
+
+    &--n1
+      left 118px
+      top 182px
+      width 92px
+      height 73px
+      background-image url('../../../../static/img/decor.png')
+
+      @media $desktopMax
+        left 38px
+        top 82px
+
+    &--n2
+      left 75vw
+      top 118px
+      width 86px
+      height 81px
+      background-image url('../../../../static/img/decor2.png')
+      transition-delay .6s
+
+      @media $desktopMax
+        left 67vw
+
+    &--n3
+      left calc(100vw - 75px)
+      top 28vh
+      width 125px
+      height 118px
+      background-image url('../../../../static/img/decor3.png')
+      transition-delay .2s
+
+    &--n4
+      left -41px
+      top 57vh
+      width 120px
+      height 173px
+      background-image url('../../../../static/img/decor4.png')
+      transition-delay .6s
+
+    &--n5
+      left 45vw
+      top 83vh
+      width 99px
+      height 75px
+      background-image url('../../../../static/img/decor5.png')
+      transition-delay .3s

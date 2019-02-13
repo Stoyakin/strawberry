@@ -1,0 +1,145 @@
+.iserv
+  padding 145px 0 31px
+
+  @media $desktopMax
+    padding 74px 0 31px
+
+  &.start-animate
+    .iserv
+      &__title
+        opacity 1
+
+      &__item
+        opacity 1
+        top 0
+
+        &:nth-child(2)
+          transition-delay .3s
+
+          &:before
+            transition-delay .3s
+
+        &:nth-child(3)
+          transition-delay .6s
+
+          &:before
+            transition-delay .6s
+
+        &:before
+          transition transform .6s
+          transform translate(-50%, -50%) scale(1)
+
+        &:hover
+          &:before
+            transition transform .4s
+            transform translate(-50%, -50%) scale(1.1)
+
+  &__title
+    text-align center
+    opacity 0
+    transition opacity .4s
+
+    @media $tPortraitMax
+      margin-bottom 75px
+
+    @media $mPortraitMax
+      margin-bottom 50px
+
+  &__row
+    display flex
+    flex-wrap wrap
+    padding 0 48px
+
+    @media $desktopMax
+      padding 0 32px
+
+    @media $tLandscapeMax
+      padding 0
+
+    @media $tPortraitMax
+      justify-content center
+
+  &__item
+    display flex
+    justify-content center
+    align-items center
+    flex-direction column
+    position relative
+    width calc(100%/3 - 100px)
+    padding 33px 50px 37px
+    margin 0 50px 100px
+    z-index 1
+    opacity 0
+    top 70px
+    transition opacity .5s, top .5s
+
+    &:hover
+      &:before
+        transform translate(-50%, -50%) scale(1.1)
+
+    &:before
+      @extend .before
+      left 50%
+      top 50%
+      transform translate(-50%, -50%) scale(0.6)
+      width 100%
+      padding-top 100%
+      background-color #f3f8ff
+      border-radius 50%
+      transition transform .4s
+      z-index -1
+
+      @media $mLandscapeMax
+        transform translate(-50%, -50%) scale(.7)
+
+      @media $mPortraitMax
+        transform translate(-50%, -50%) scale(.9)
+
+    @media $desktopMax
+      margin 0 45px 82px
+      padding 15px 25px 21px
+      width calc(100%/3 - 90px)
+      top 40px
+
+    @media $tLandscapeMax
+      width calc(100%/3 - 50px)
+      margin 0 25px 50px
+
+    @media $tPortraitMax
+      width calc(50% - 50px)
+      margin-bottom 100px
+
+      &:last-child
+        margin-bottom 0
+
+    @media $mLandscapeMax
+      width 100%
+
+    &-overimg
+      display flex
+      justify-content center
+      align-items center
+      width 100%
+      height 181px
+      margin-bottom 22px
+
+      @media $desktopMax
+        height 144px
+        margin-bottom 14px
+
+    &-img
+      max-height 100%
+
+    &-title
+      color $color
+      font-size 16px
+      font-weight 700
+      line-height 21px
+      text-transform uppercase
+      text-align center
+      max-width 200px
+
+      @media $desktopMax
+        font-size 13px
+        line-height 18px
+        max-width 165px

@@ -1,0 +1,379 @@
+.title
+  position relative
+  color #333
+  font-size 30px
+  font-weight 700
+  line-height 36px
+  text-transform uppercase
+  text-align center
+  padding-bottom 20px
+  margin-bottom 50px
+  letter-spacing 0.01em
+
+  @media $desktopMax
+    font-size 24px
+    padding-bottom 18px
+
+  @media $mLandscapeMax
+    margin-bottom 35px
+
+  &:before
+    @extend .before
+    left 50%
+    transform translateX(-50%)
+    bottom 0
+    width 40px
+    height 4px
+    background url('../../../../static/img/svg/flood.svg') no-repeat center
+    background-size cover
+
+.color-red
+  color #e1150a
+
+.color-green
+  color #1e7b35
+
+.color-blue
+  color #578bc4
+
+.text
+  color #333
+
+  h1:not([class]), h2:not([class]), h3:not([class]), h4:not([class]), h5:not([class])
+    position relative
+    color #333
+    font-weight 700
+    text-transform uppercase
+    text-align center
+
+    &:before
+      @extend .before
+      left 50%
+      transform translateX(-50%)
+      bottom 0
+      width 40px
+      height 4px
+      background url('../../../../static/img/svg/flood.svg') no-repeat center
+      background-size cover
+
+  h1:not([class])
+    font-size 36px
+    line-height 48px
+    padding-bottom 17px
+    margin-bottom 34px
+
+    @media $desktopMax
+      font-size 30px
+      line-height 36px
+      padding-bottom 20px
+      margin-bottom 45px
+
+  h2:not([class])
+    font-size 30px
+    line-height 36px
+    padding-bottom 20px
+    margin 106px 0 44px
+
+    @media $desktopMax
+      font-size 24px
+      line-height 30px
+      margin 88px 0 46px
+
+  h3:not([class])
+    font-size 24px
+    line-height 30px
+    padding-bottom 17px
+    margin 57px 0 23px
+
+    @media $desktopMax
+      font-size 18px
+      line-height 24px
+      margin 38px 0 25px
+
+  h4:not([class]), h5:not([class])
+    font-size 20px
+    line-height 26px
+    padding-bottom 17px
+    margin 35px 0 20px
+
+    @media $desktopMax
+      font-size 18px
+      line-height 24px
+
+  figure:not([class])
+    margin 27px 0 57px
+    max-width 100%
+    display flex
+    justify-content center
+    align-items center
+    width 100%
+    position relative
+    overflow hidden
+    z-index 1
+
+    @media $desktopMax
+      margin 16px 0 40px
+
+    &:before
+      @extend .before
+      left 0
+      top 0
+      width 100%
+      height 101%
+      background url('../../../../static/img/border-img.png') no-repeat center
+      background-size 100% 100%
+      z-index 2
+
+  figcaption:not([class])
+    color #333
+    font-size 15px
+    font-weight 300
+    line-height 24px
+
+    @media $desktopMax
+      font-size 14px
+      line-height 22px
+
+  img:not([class])
+    margin 15px 0
+    max-width 100%
+    margin-left 0
+
+  * + img:not([class])
+    margin-top 15px
+
+  ul:not([class])
+    list-style none
+    margin 23px 0 23px 30px
+
+    @media $desktopMax
+      margin 18px 0 18px 24px
+
+  * + ul:not([class])
+    margin-top 23px
+
+    @media $desktopMax
+      margin-top 18px
+
+  ul:not([class]) ul:not([class]),
+  ol:not([class]) ol:not([class]),
+  ol:not([class]) ul:not([class]),
+  ul:not([class]) ol:not([class])
+    margin-top 12px !important
+    margin-left 16px !important
+
+  ul:not([class]) li
+    padding-left 24px
+    position relative
+    font-size 15px
+    line-height 24px
+    font-weight 400
+
+    @media $desktopMax
+      padding-left 19px
+      font-size 14px
+      line-height 22px
+
+  ul:not([class]) li + li
+    margin-top: 12px
+
+    @media $desktopMax
+      margin-top: 10px
+
+  ul:not([class]) ol:not([class]),
+  ol:not([class]) ul:not([class]),
+  ul:not([class]) li:not([class]) ol:not([class]),
+  ol:not([class]) li:not([class]) ul:not([class])
+    counter-reset myCounter
+
+  ul:not([class]) ol:not([class]) li:before
+    height 24px
+    background none
+
+  ul:not([class]) li:before
+    content ""
+    position absolute
+    width 4px
+    height 4px
+    left 0
+    top 11px
+    background-color #4a7a3d
+    border-radius 2px
+
+  ol:not([class]) ul:not([class]) li:before
+    content ""
+    width 4px
+    height 4px
+    left 0
+    top 11px
+    background-color #4a7a3d
+    padding 0
+
+  ol:not([class])
+    list-style none
+    margin 23px 0 23px 30px
+    counter-reset myCounter
+
+    @media $desktopMax
+      margin 18px 0 18px 24px
+
+  * + ol:not([class])
+    margin-top 23px
+
+    @media $desktopMax
+      margin-top 18px
+
+  ol:not([class]) li
+    padding-left 24px
+    position relative
+    font-size 15px
+    line-height 24px
+    font-weight 400
+
+    @media $desktopMax
+      padding-left 19px
+      font-size 14px
+      line-height 22px
+
+  ol:not([class]) li + li
+    margin-top 16px
+
+    @media $desktopMax
+      margin-top: 10px
+
+  ol:not([class]) li:before
+    counter-increment myCounter
+    content counter(myCounter) "."
+    position absolute
+    left 1px
+    top 0
+    width 28px
+    padding-right 9px
+    text-align left
+    color #4a7a3d
+    font-size 15px
+    line-height 24px
+    font-weight 400
+    box-sizing border-box
+    height 24px
+    background-color transparent
+
+    @media $desktopMax
+      font-size 14px
+      line-height 22px
+
+  table:not([class])
+    margin 38px 0
+    max-width 100%
+
+    @media $desktopMax
+      margin 42px 0
+
+    tr
+      position relative
+      text-align left
+      font-size 15px
+      line-height 24px
+
+      @media $desktopMax
+        font-size 14px
+        line-height 22px
+
+
+    th
+      background-color #f3f8ff
+      color #333
+      font-size 14px
+      font-weight 700
+      text-transform uppercase
+      border-bottom none
+      border-right 2px solid #e9eef5
+      border-bottom none
+
+      @media $desktopMax
+        padding 36px 29px 27px
+
+      &:last-child
+        border-right none
+
+    td
+      padding 25px 29px 20px
+      color #5f5f5f
+      font-size 15px
+      line-height 24px
+      font-weight 400
+      vertical-align top
+      position relative
+      border-right 2px solid #f4f8ff
+      border-bottom 2px solid #f4f8ff
+
+      @media $desktopMax
+        padding 21px 29px 17px
+        font-size 14px
+        line-height 22px
+
+      &:last-child
+        border-right none
+  b
+    font-weight bold
+
+  p
+    &:not([class])
+      font-size 15px
+      line-height 24px
+      font-weight 400
+      margin 24px 0
+
+      @media $desktopMax
+        font-size 14px
+        line-height 22px
+
+      & + p
+          margin-top 24px
+
+  a:not([class])
+    position relative
+    color #e1150a
+    font-size 15px
+    line-height 24px
+    font-weight 400
+    border-bottom 1px solid #e1150a
+    transition: border .4s;
+
+    @media $desktopMax
+      font-size 14px
+      line-height 22px
+
+    &:hover
+      border-bottom-color transparent
+
+  *:not([class]):not(span):first-child
+    margin-top 0 !important
+
+  *:not([class]):not(span):last-child
+    margin-bottom 0 !important
+
+  iframe
+    margin 18px 0 16px !important
+    max-width 100% !important
+
+input::-webkit-input-placeholder
+    color #98a1b2
+
+input::-moz-placeholder
+    color #98a1b2
+
+input:-ms-input-placeholder
+    color #98a1b2
+
+input:-moz-placeholder
+    color #98a1b2
+
+input.warning,
+textarea.warning
+    border-color #d70122
+    & + .field-wrap__label
+        color #d70122
+
+.hidden-block
+    display none

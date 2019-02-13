@@ -1,0 +1,145 @@
+.nav
+  &--footer
+    padding 0
+
+    @media $tPortraitMax
+      display none
+
+    .nav__list
+      margin-bottom -13px
+
+  &__burger
+    display none
+    position fixed
+    right 30px
+    top 30px
+    padding 0
+    border 0
+    background-color #e1150a
+    width 40px
+    height 40px
+    border-radius 50%
+    transition-timing-function linear
+    transition-duration .15s
+    transition-property opacity, filter
+    cursor pointer
+    outline none
+    z-index 10
+
+    @media $tLandscape
+      top 45px
+
+    span
+      position relative
+      display inline-block
+      width 16px
+      height 11px
+
+    i
+      display block
+      margin-top -2px
+      position absolute
+      width 16px
+      height 1px
+      transition-property transform
+      background-color #fff
+      top auto
+      bottom 0
+      transition-delay .13s
+      transition-timing-function cubic-bezier(.55,.055,.675,.19)
+      transition-duration .13s
+
+      &:after,
+      &:before
+        display block
+        content ""
+        position absolute
+        height 1px
+        transition-property transform
+        background-color #fff
+
+      &:before
+        width 16px
+        top -10px
+        transition top .12s cubic-bezier(.33333,.66667,.66667,1) .2s,transform .13s cubic-bezier(.55,.055,.675,.19)
+
+      &:after
+        width 12px
+        bottom -10px
+        top -5px
+        transition: top .2s cubic-bezier(.33333,.66667,.66667,1) .2s,opacity .1s linear
+
+    &--active
+      i
+        transition-delay .22s
+        transition-timing-function cubic-bezier(.215,.61,.355,1)
+        transform translate3d(0,-5px,0) rotate(-45deg)
+
+        &:before
+          top 0
+          transition top .1s cubic-bezier(.33333,0,.66667,.33333) .16s,transform .13s cubic-bezier(.215,.61,.355,1) .25s
+          transform rotate(-90deg)
+
+        &:after
+          top 0
+          transition top .2s cubic-bezier(.33333,0,.66667,.33333),opacity .1s linear .22s
+          opacity 0
+
+    @media $tLandscapeMax
+      display block
+
+  &__list
+    display flex
+    margin-bottom -20px
+    margin-top 23px
+
+    &-item
+      margin-right 44px
+      margin-bottom 20px
+
+      @media $desktopMax
+        margin-right 40px
+
+      &:last-child
+        margin-right 0
+
+    &-href
+      display inline-block
+      vertical-align top
+      position relative
+      color #7d7d7d
+      font-family Fregat
+      font-size 16px
+      font-weight 700
+      line-height 20px
+      padding 10px 30px
+      background-color white
+      border-radius 20px
+      letter-spacing 0.02em
+      overflow hidden
+      transition color .4s
+      z-index 1
+
+      &:before
+        @extend .before
+        left -100%
+        top 0
+        width 100%
+        height 100%
+        border-radius 20px
+        background-color #e1150a
+        opacity 0
+        transition left .5s, opacity .4s
+        z-index -1
+
+      &:hover
+        color #fff
+
+        &:before
+          opacity 1
+          left 0
+
+      @media $desktopMax
+        font-size 14px
+        line-height 18px
+        padding 7px 20px

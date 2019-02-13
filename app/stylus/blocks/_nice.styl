@@ -1,0 +1,189 @@
+.nice
+  display flex
+  align-items center
+  flex-direction column
+  position relative
+  z-index 1
+  padding 99px 0 113px
+  min-height 731px
+  margin-top 69px
+  margin-bottom 149px
+  overflow hidden
+
+  &--home
+    margin-top 114px
+    margin-bottom 118px
+    padding-top 77px
+    background-color #f3f8ff
+
+    .nice__decor-overimg
+      position relative
+      top 49px
+      left 11px
+
+  .container
+    padding 0 117px
+
+  &:before
+    @extend .before
+    left 0
+    top 0
+    width 100%
+    height 57px
+    background url('../../../../static/img/wave4.png') no-repeat center
+    background-size cover
+    z-index 0
+
+    //@media $desktopMax
+
+  &:after
+    @extend .after
+    left 0
+    bottom 0
+    width 100%
+    height 113px
+    background url('../../../../static/img/wave5.png') no-repeat center
+    background-size cover
+    z-index 0
+
+    //@media $desktopMax
+
+  &__row
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    align-items center
+
+  &--hero
+    background-color #fff4e1
+
+  &__info
+    position relative
+    z-index 1
+
+  &__info, &__decor-overimg
+    width calc(50% - 15px)
+
+  &__title
+    text-align left
+    margin-bottom 0
+
+    &:before
+      left 0
+      transform none
+
+  &__btn
+    margin-top 55px
+
+  &__text
+    color #5f5f5f
+    font-size 15px
+    line-height 24px
+    margin-top 48px
+
+  &__decor-overimg
+    position relative
+    top 60px
+    left 22px
+
+  &__decor-img
+    max-width 100%
+
+  &__decor
+    position relative
+    width 100%
+    height 0
+
+    &-item
+      position absolute
+
+      &--el1
+        left -50px
+        top 48px
+        width 207px
+        height 95px
+        background-image url('../../../../static/img/clouds/clouds.png')
+
+      &--el2
+        left 59vw
+        top 37px
+        width 187px
+        height 106px
+        background-image url('../../../../static/img/clouds/clouds2.png')
+
+      &--el3
+        left 37vw
+        top 217px
+        width 217px
+        height 105px
+        background-image url('../../../../static/img/clouds/clouds3.png')
+
+      &--el4
+        left 85vw
+        top 157px
+        width 176px
+        height 81px
+        background-image url('../../../../static/img/clouds/clouds4.png')
+
+      &--el5
+        left 13vw
+        top 399px
+        width 187px
+        height 106px
+        background-image url('../../../../static/img/clouds/clouds5.png')
+
+      &--el6
+        left 57vw
+        top 362px
+        width 249px
+        height 113px
+        background-image url('../../../../static/img/clouds/clouds6.png')
+        z-index 1
+
+      &--el7
+        left 28vw
+        top 525px
+        width 80px
+        height 46px
+        background-image url('../../../../static/img/wood/wood.png')
+        z-index 1
+
+      &--el8
+        left 36vw
+        top 466px
+        width 121px
+        height 58px
+        background-image url('../../../../static/img/wood/wood2.png')
+        z-index 1
+
+      &--el9
+        left 61vw
+        top 514px
+        width 112px
+        height 48px
+        background-image url('../../../../static/img/wood/wood3.png')
+        z-index 1
+
+      &--el10
+        left 85vw
+        top 522px
+        width 97px
+        height 49px
+        background-image url('../../../../static/img/wood/wood4.png')
+        z-index 1
+
+      &--el11
+        left 96vw
+        top 376px
+        width 115px
+        height 75px
+        background-image url('../../../../static/img/wood/wood5.png')
+        z-index 1
+
+      &--el12
+        left -75px
+        top 484px
+        width 149px
+        height 75px
+        background-image url('../../../../static/img/wood/wood6.png')
+        z-index 1

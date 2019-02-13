@@ -1,0 +1,46 @@
+.breadcrumbs
+  margin 0 0 58px
+
+  @media $desktopMax
+    margin-bottom 31px
+
+  &__list
+    display flex
+    flex-wrap wrap
+    justify-content center
+    align-items flex-start
+    position relative
+
+  &__item
+    position relative
+    color rgba(#989898, .8)
+    font-size 15px
+    font-weight 400
+    line-height 18px
+    margin 0 54px 8px 0
+
+    &:before
+      @extend .before
+      right -29px
+      top 8px
+      width 4px
+      height 4px
+      border-radius 2px
+      background-color #ccc
+
+    &:last-child
+      margin-right 0
+
+      &:before
+        display none
+        content none
+
+  &__link
+    color rgba(#989898, .8)
+
+    &[href]
+      transition border .4s
+      border-bottom 1px solid #989898
+
+      &:hover
+        border-bottom-color transparent

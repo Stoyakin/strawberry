@@ -1,0 +1,43 @@
+.info
+  margin-top 80px
+
+  & + &
+    margin-top 112px
+
+  & +.text
+    margin-top 107px
+
+  &__wrap
+    max-width 565px
+    margin 0 auto
+
+  &__title
+    font-size 24px
+    line-height 30px
+    padding-bottom 17px
+    margin 0 0 48px
+    font-weight 700
+    text-transform uppercase
+    text-align center
+
+    &:before
+      @extend .before
+      left 50%
+      transform translateX(-50%)
+      bottom 0
+      width 40px
+      height 4px
+      background url('../../../../static/img/svg/flood.svg') no-repeat center
+      background-size cover
+
+    @media $desktopMax
+      font-size 18px
+      line-height 24px
+      margin 38px 0 25px
+
+  &__content
+    margin-top 40px
+
+    .text > ul
+      margin-top 0
+      margin-left 0

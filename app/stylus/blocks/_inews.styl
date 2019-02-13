@@ -1,0 +1,147 @@
+.inews
+  padding 80px 0 149px
+
+  @media $desktopMax
+    padding 30px 0 59px
+
+  &--page
+    padding 0
+    margin-top 45px
+    margin-bottom 50px
+
+    @media $desktopMax
+      margin-bottom 25px
+
+    @media $tPortraitMax
+      margin-bottom 0
+
+    .inews__more-btn
+      opacity 1
+      margin-top -20px
+
+    .inews__item
+      padding-left 17px
+      opacity 1
+      top 0
+      margin-bottom 64px
+
+      @media $tPortraitMax
+        margin-bottom 45px
+
+  &.start-animate
+    .inews
+      &__title, &__more-btn, &__item
+        opacity 1
+
+      &__item
+        top 0
+
+        &:nth-child(even)
+          transition-delay .4s
+
+      &__more-btn
+        transition-delay .8s
+
+  &__title
+    opacity 0
+    transition opacity .4s
+
+  &__row
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    max-width 930px
+    margin 0 auto
+
+    @media $desktopMax
+      max-width 754px
+
+  &__item
+    position relative
+    top 70px
+    opacity 0
+    width calc(50% - 9px)
+    transition opacity .4s, top .5s
+    overflow hidden
+
+    @media $mLandscapeMax
+      width 100%
+      margin-bottom 25px
+
+      &:last-child
+        margin-bottom 0
+
+    &-top
+      display flex
+      align-items center
+      flex-wrap wrap
+      margin-bottom 14px
+
+    &-date
+      display block
+      width 67px
+      height 67px
+      border-radius 50%
+      background-color #1e7b35
+      flex-shrink 0
+      color white
+      font-family Fregat
+      font-size 13px
+      line-height 16px
+      font-weight 700
+      padding 18px 16px
+      text-align center
+      margin-right 21px
+      word-break break-word
+
+      @media $desktopMax
+        width 50px
+        height 50px
+        font-size 11px
+        line-height 13px
+        padding 13px 11px
+
+      span
+        display block
+
+    &-title
+      width calc(100% - 88px)
+      color #333
+      font-family Fregat
+      font-size 18px
+      font-weight 700
+      line-height 24px
+
+      @media $desktopMax
+        font-size 15px
+        line-height 18px
+
+      span
+        border-bottom 1px solid lightgrey
+        transition border .4s
+
+      &:hover
+        span
+          border-bottom-color transparent
+
+    &-descr
+      color #5f5f5f
+      font-family Fregat
+      font-size 15px
+      font-weight 400
+      line-height 24px
+      letter-spacing .025em
+
+      @media $desktopMax
+        font-size 14px
+        line-height 22px
+
+  &__more-btn
+    margin-top 44px
+    left 50%
+    transform translateX(-50%)
+    opacity 0
+    transition opacity .4s
+
+    @media $desktopMax
+      margin-top 37px

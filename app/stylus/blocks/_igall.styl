@@ -1,0 +1,103 @@
+.igall
+  padding 40px 0 80px
+
+  @media $desktopMax
+    padding 11px 0 30px
+
+  @media $mLandscapeMax
+    padding-top 60px
+    padding-bottom 50px
+
+  &.start-animate
+    .swiper-container
+      opacity 1
+
+  .container
+    position relative
+
+  .swiper
+    &-container
+      max-width 1170px
+      margin 0 auto
+      opacity 0
+      transition opacity .5s
+
+      @media $desktopMax
+        max-width 950px
+
+      @media $tLandscapeMax
+        max-width calc(100% - 180px)
+
+      @media $mLandscapeMax
+        max-width 100%
+        width 100%
+
+    &-buttons
+      position absolute
+      left 0
+      top 50%
+      transform translateY(-50%)
+      width 100%
+      height 0
+
+      @media $mLandscapeMax
+        top auto
+        transform none
+        position relative
+        width 150px
+        margin 35px auto 0
+
+    &-button
+      &-prev, &-next
+        margin 0
+        transform translateY(-50%)
+        width 54px
+        height 30px
+        background url('../../../../static/img/svg/right.svg') no-repeat center
+        background-size cover
+        opacity .25
+        transition opacity .4s
+
+        &:hover
+          opacity 1
+
+      &-prev
+        left -2px
+        transform translateY(-50%) scale(-1, 1)
+
+      &-next
+        right -2px
+    /*
+    &-wrapper
+    &-slide
+    */
+
+  &__overimg
+    display flex
+    justify-content center
+    align-items center
+    width 100%
+    position relative
+    overflow hidden
+    z-index 1
+
+    &:before
+      @extend .before
+      left 0
+      top 0
+      width 100%
+      height 101%
+      background url('../../../../static/img/border-gallery.png') no-repeat center
+      background-size 100% 100%
+      z-index 2
+
+    &:hover
+      .igall__img
+        transform scale(1.015)
+
+  &__img
+    height auto
+    min-width 100%
+    transition transform .4s
+    will-change transform
+    z-index 1

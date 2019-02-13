@@ -1,0 +1,36 @@
+.main
+  &__title
+    position relative
+    color #333
+    font-size 36px
+    font-weight 700
+    line-height 48px
+    text-transform uppercase
+    padding-bottom 17px
+    margin-bottom 34px
+    text-align center
+
+    @media $desktopMax
+      font-size 30px
+      line-height 36px
+      padding-bottom 20px
+      margin-bottom 45px
+
+    &:before
+      @extend .before
+      left 50%
+      transform translateX(-50%)
+      bottom 0
+      width 40px
+      height 4px
+      background url('../../../../static/img/svg/flood.svg') no-repeat center
+      background-size cover
+
+  &__back-href
+    padding 30px 15px
+    margin-top 44px
+    left 50%
+    transform translateX(-50%)
+
+    @media $desktopMax
+      margin-top 37px

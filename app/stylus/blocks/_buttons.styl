@@ -1,0 +1,56 @@
+.btn
+  display inline-block
+  vertical-align top
+  position relative
+  color white
+  font-family Fregat
+  font-size 13px
+  line-height 16px
+  font-weight 700
+  text-transform uppercase
+  background-color #e1150a
+  border none
+  user-select none
+  cursor pointer
+
+  @media $desktopMax
+    font-size 11px
+    line-height 13px
+
+  &--circle
+    display inline-flex
+    flex-direction column
+    justify-content center
+    background-color transparent
+    width 100px
+    height 100px
+    text-align center
+    border-radius 50%
+    padding-top 5px
+    z-index 1
+
+    &:before
+      @extend .before
+      left 50%
+      top 50%
+      transform translate(-50%, -50%)
+      width 100px
+      height 100px
+      border-radius 50%
+      background-color #e1150a
+      transition width .4s, height .4s
+      z-index -1
+
+    &:hover
+      &:before
+        width 112px
+        height 112px
+
+        @media $desktopMax
+          width 100px
+          height 100px
+
+    @media $desktopMax
+      width 90px
+      height 90px
+      padding 5px 15px 0

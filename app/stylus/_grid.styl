@@ -1,0 +1,30 @@
+.container
+    width 100%
+    max-width 100%
+    margin 0 auto
+
+    @media $desktop
+      max-width 1406px
+      &--min
+        max-width 930px
+
+    @media $desktopMax
+      max-width 1144px
+
+      &--min
+        max-width 755px
+
+    @media $tLandscapeMax
+      max-width 992px
+
+      &--min
+        max-width 755px
+
+    @media $tPortraitMax
+      max-width 700px
+
+    @media $mLandscapeMax
+      max-width 450px
+
+    @media $mPortraitMax
+      max-width calc(100% - 40px)
