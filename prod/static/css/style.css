@@ -4452,12 +4452,6 @@ textarea.warning + .field-wrap__label {
   transition: transform 0.8s, -webkit-transform 0.8s;
 }
 
-.services__item:hover .services__item-img {
-  -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
 .services__item:nth-child(2) {
   -webkit-transition-delay: 0.25s;
           transition-delay: 0.25s;
@@ -4529,11 +4523,6 @@ textarea.warning + .field-wrap__label {
 .services__item-img {
   max-width: 100%;
   max-height: 100%;
-  -webkit-transition: -webkit-transform 0.3s ease-in;
-  transition: -webkit-transform 0.3s ease-in;
-  transition: transform 0.3s ease-in;
-  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
-  will-change: transform;
 }
 
 .services__item-title {
