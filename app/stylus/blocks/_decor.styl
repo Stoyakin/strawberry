@@ -6,6 +6,28 @@
   @media $tLandscapeMax
     display none
 
+  &--mobile
+    display none
+    position fixed
+    left 0
+    top 0
+    width: 100vw;
+    z-index -1
+    pointer-events none
+    opacity 0
+    transition opacity .4s
+
+    .decor__item--n2
+      left 83vw
+      top 65vh
+
+    .decor__item--n1
+      @media $mPortraitMax
+        left 0
+
+    @media $tLandscapeMax
+      display block
+
   &__item
     display block
     position absolute
@@ -63,3 +85,20 @@
       height 75px
       background-image url('../../../../static/img/decor5.png')
       transition-delay .3s
+
+    &--n6
+      left 95vw
+      top 102px
+      width 119px
+      height 90px
+      background-image url('../../../../static/img/decor5.png')
+      transition-delay .3s
+      background-size contain
+
+    &--n7
+      left -47px
+      top 765px
+      width 111px
+      height 101px
+      background-image url('../../../../static/img/decor6.png')
+      transition-delay .6s

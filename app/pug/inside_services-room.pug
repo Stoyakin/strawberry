@@ -8,6 +8,11 @@ html(lang="ru")
 
   body
     .wrapper.wrapper--inside
+      +b.decor.js-decor
+        +e('span')(data-maxRound="13").item.--n2
+        +e('span')(data-maxRound="8").item.--n3
+        +e('span')(data-maxRound="12").item.--n4
+
       include includes/__header
 
       main.main
@@ -27,7 +32,7 @@ html(lang="ru")
 
           +b('section').services.--weekdays
             .container
-              +e.wrap
+              +e.wrap.js-scroll-anim
                 +e.row
                   +services-item([
                     {
@@ -45,38 +50,39 @@ html(lang="ru")
                   ])
 
           .container.container--min
-            .text
-              h2 Стоимость посещения
-              table
-                tr
-                  td
-                    span.color-blue 30 минут
+            .common-wrap.js-scroll-anim
+              .text
+                h2 Стоимость посещения
+                table
+                  tr
+                    td
+                      span.color-blue 30 минут
 
-                  td
-                    span.color-blue 390 руб.
+                    td
+                      span.color-blue 390 руб.
 
-                tr
-                  td
-                    span.color-green 1 час
+                  tr
+                    td
+                      span.color-green 1 час
 
-                  td
-                    span.color-green 150 руб.
+                    td
+                      span.color-green 150 руб.
 
-                tr
-                  td 
-                    span.color-red Безлимит на 1 день для 1 ребёнка
-                  td 
-                    span.color-red 350 руб.
+                  tr
+                    td 
+                      span.color-red Безлимит на 1 день для 1 ребёнка
+                    td 
+                      span.color-red 350 руб.
 
-                tr
-                  td Групповые посещения
-                  td Обсудим индивидуально — обращайтесь
+                  tr
+                    td Групповые посещения
+                    td Обсудим индивидуально — обращайтесь
 
-              p(style="margin-top: -15px;") 
-                span.color-green Специальная скидка 10%
-                |  – если один взрослый приходит с 2 и более детьми (если два взрослых, то скидка действует при сопровождении 3 и более детей).
+                p(style="margin-top: -15px;") 
+                  span.color-green Специальная скидка 10%
+                  |  – если один взрослый приходит с 2 и более детьми (если два взрослых, то скидка действует при сопровождении 3 и более детей).
 
-          +b('section').nice.--home
+          +b('section').nice.--home.js-scroll-anim
             +e.decor
               +e('span').decor-item.--el7
               +e('span').decor-item.--el8
@@ -95,15 +101,16 @@ html(lang="ru")
                   +e('img')(src="static/img/wood/home.png" alt="").decor-img
             
           .container.container--min
-            .text
-              h2 Мы ждём вас каждый будний день
+            .common-wrap.js-scroll-anim
+              .text
+                h2 Мы ждём вас каждый будний день
 
-              p(style="font-size: 18px;")
-                b.color-green ПН-ПТ 11:00 — 20:00
-              
-              p P.s. В выходные не приглашаем, поскольку они почти всегда заняты частными мероприятиями. Также заранее приносим извинения, но в редких случаях можем закрыться на день рождения и в будни, о чём обязательно сообщим в новостях на сайте и в 
-                a(href="#") группе ВКонтакте
-                | . Кстати, обязательно подписывайтесь, чтобы не пропустить интересные акции и розыгрыши!
+                p(style="font-size: 18px;")
+                  b.color-green ПН-ПТ 11:00 — 20:00
+                
+                p P.s. В выходные не приглашаем, поскольку они почти всегда заняты частными мероприятиями. Также заранее приносим извинения, но в редких случаях можем закрыться на день рождения и в будни, о чём обязательно сообщим в новостях на сайте и в 
+                  a(href="#") группе ВКонтакте
+                  | . Кстати, обязательно подписывайтесь, чтобы не пропустить интересные акции и розыгрыши!
 
             include includes/__feedback
 

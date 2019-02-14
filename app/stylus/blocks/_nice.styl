@@ -9,6 +9,38 @@
   margin-top 69px
   margin-bottom 149px
   overflow hidden
+  opacity 0
+  transition opacity .4s
+
+  &.start-animate
+    opacity 1
+
+    &.nice--home
+      .nice__decor-item
+        transform scaleX(1)
+
+      @media $desktopMax
+        .nice__decor
+          top -150px
+
+      @media $tLandscapeMax
+        .nice__decor-item
+          transform scale(0.8)
+
+      @media $mLandscapeMax
+        .nice__decor
+          position absolute
+          left 0
+          top auto
+          bottom 610px
+
+        .nice__decor-overimg
+          top 0
+          left 0
+
+    &.nice--hero
+      .nice__decor-overimg
+        animation fadeInLeft 3s linear
 
   @media $desktopMax
     margin-top 52px
@@ -152,6 +184,14 @@
     &-item
       position absolute
       background-size contain
+      background-repeat no-repeat
+      background-position center
+
+      &--el7, &--el8, &--el9, &--el10, &--el11, &--el12
+        transform-origin bottom
+        transform scaleY(0)
+        transition .4s
+        z-index 1
 
       &--el1
         left -50px
@@ -159,6 +199,7 @@
         width 207px
         height 95px
         background-image url('../../../../static/img/clouds/clouds.png')
+        animation swimRight 26s linear infinite
 
         @media $desktopMax
           top 18px
@@ -171,6 +212,7 @@
         width 187px
         height 106px
         background-image url('../../../../static/img/clouds/clouds2.png')
+        animation swimLeft 24s linear infinite
 
         @media $desktopMax
           width 134px
@@ -184,6 +226,7 @@
         width 217px
         height 105px
         background-image url('../../../../static/img/clouds/clouds3.png')
+        animation swimLeft2 40s linear infinite
 
         @media $desktopMax
           top 140px
@@ -196,6 +239,7 @@
         width 176px
         height 81px
         background-image url('../../../../static/img/clouds/clouds4.png')
+        animation swimRight 34s linear infinite
 
         @media $desktopMax
           width 126px
@@ -209,6 +253,7 @@
         width 187px
         height 106px
         background-image url('../../../../static/img/clouds/clouds5.png')
+        animation swimRightTop 35s linear infinite
 
         @media $desktopMax
           width 136px
@@ -222,6 +267,8 @@
         width 249px
         height 113px
         background-image url('../../../../static/img/clouds/clouds6.png')
+        animation swimRightTop2 28s linear infinite
+        animation-delay 1s
         z-index 1
 
         @media $desktopMax
@@ -236,7 +283,7 @@
         width 80px
         height 46px
         background-image url('../../../../static/img/wood/wood.png')
-        z-index 1
+        transition-delay .6s
 
       &--el8
         left 36vw
@@ -244,7 +291,7 @@
         width 121px
         height 58px
         background-image url('../../../../static/img/wood/wood2.png')
-        z-index 1
+        transition-delay 1s
 
       &--el9
         left 61vw
@@ -252,7 +299,7 @@
         width 112px
         height 48px
         background-image url('../../../../static/img/wood/wood3.png')
-        z-index 1
+        transition-delay .7s
 
       &--el10
         left 85vw
@@ -260,7 +307,7 @@
         width 97px
         height 49px
         background-image url('../../../../static/img/wood/wood4.png')
-        z-index 1
+        transition-delay .8s
 
       &--el11
         left 96vw
@@ -268,7 +315,7 @@
         width 115px
         height 75px
         background-image url('../../../../static/img/wood/wood5.png')
-        z-index 1
+        transition-delay .6s
 
       &--el12
         left -75px
@@ -276,4 +323,4 @@
         width 149px
         height 75px
         background-image url('../../../../static/img/wood/wood6.png')
-        z-index 1
+        transition-delay .5s

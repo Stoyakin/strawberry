@@ -89,20 +89,12 @@ $(function () {
       let $body = $('body'),
         elemsAnimArr = ['.js-scroll-anim'];
 
-      if ($('.js-decor').length) {
-        this.decorAnimate();
-      }
-
-      if ($('.js-map').length) {
-        this.map();
-      }
-
       function visChecker(el) {
         const rect = el.getBoundingClientRect();
         const wHeight = window.innerHeight || document.documentElement.clientHeight;
         const wWidth = window.innerWidth || document.documentElement.clientWidth;
         return (
-          rect.bottom - el.offsetHeight * 0.35 <= wHeight &&
+          rect.bottom - el.offsetHeight * 0.50 <= wHeight &&
           rect.right <= wWidth
         );
       }
@@ -125,6 +117,14 @@ $(function () {
 
       if (elemsAnimArr.length) {
         elemVisCheck(elemsAnimArr);
+      }
+
+      if ($('.js-decor').length) {
+        this.decorAnimate();
+      }
+
+      if ($('.js-map').length) {
+        this.map();
       }
 
       if ($('.js-igall-swiper').length) {
@@ -165,6 +165,34 @@ $(function () {
             $body.removeClass('open-menu');
           }
           return false;
+        });
+      }
+
+      if ($('.js-btn-toggle-table').length) {
+        $('.js-btn-toggle-table').on('click', function () {
+          let _t = $(this),
+            hiddenEl = _t.parents('.price-table').find('.price-table__content').first();
+
+          if (!_t.hasClass('active')) {
+            _t.addClass('active');
+            hiddenEl.slideDown('slow');
+          } else {
+            _t.removeClass('active');
+            hiddenEl.slideUp('slow');
+          }
+
+          return false;
+        });
+      }
+
+      let $contentTables = $(".text table");
+      let wrapFlag
+
+      if ($contentTables.length) {
+        $contentTables.each(function () {
+          if (!$(this).parents('.price-table').length) {
+            $(this).wrap('<div class="table-wrap">');
+          }
         });
       }
 

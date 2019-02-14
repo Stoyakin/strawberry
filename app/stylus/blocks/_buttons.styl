@@ -41,6 +41,15 @@
       transition width .4s, height .4s
       z-index -1
 
+    @media $desktopMax
+      width 90px
+      height 90px
+      padding 5px 15px 0
+
+      &:before
+        width 90px
+        height 90px
+
     &:hover
       &:before
         width 112px
@@ -50,7 +59,3 @@
           width 100px
           height 100px
 
-    @media $desktopMax
-      width 90px
-      height 90px
-      padding 5px 15px 0

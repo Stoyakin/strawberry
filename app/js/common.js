@@ -68,19 +68,11 @@ $(function () {
       var $body = $('body'),
           elemsAnimArr = ['.js-scroll-anim'];
 
-      if ($('.js-decor').length) {
-        this.decorAnimate();
-      }
-
-      if ($('.js-map').length) {
-        this.map();
-      }
-
       function visChecker(el) {
         var rect = el.getBoundingClientRect();
         var wHeight = window.innerHeight || document.documentElement.clientHeight;
         var wWidth = window.innerWidth || document.documentElement.clientWidth;
-        return rect.bottom - el.offsetHeight * 0.35 <= wHeight && rect.right <= wWidth;
+        return rect.bottom - el.offsetHeight * 0.50 <= wHeight && rect.right <= wWidth;
       }
 
       function elemVisCheck(elArray) {
@@ -101,6 +93,14 @@ $(function () {
 
       if (elemsAnimArr.length) {
         elemVisCheck(elemsAnimArr);
+      }
+
+      if ($('.js-decor').length) {
+        this.decorAnimate();
+      }
+
+      if ($('.js-map').length) {
+        this.map();
       }
 
       if ($('.js-igall-swiper').length) {
@@ -144,6 +144,36 @@ $(function () {
           }
 
           return false;
+        });
+      }
+
+      if ($('.js-btn-toggle-table').length) {
+        $('.js-btn-toggle-table').on('click', function () {
+          var _t = $(this),
+              hiddenEl = _t.parents('.price-table').find('.price-table__content').first();
+
+          if (!_t.hasClass('active')) {
+            _t.addClass('active');
+
+            hiddenEl.slideDown('slow');
+          } else {
+            _t.removeClass('active');
+
+            hiddenEl.slideUp('slow');
+          }
+
+          return false;
+        });
+      }
+
+      var $contentTables = $(".text table");
+      var wrapFlag;
+
+      if ($contentTables.length) {
+        $contentTables.each(function () {
+          if (!$(this).parents('.price-table').length) {
+            $(this).wrap('<div class="table-wrap">');
+          }
         });
       }
 

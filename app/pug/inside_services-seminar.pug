@@ -8,6 +8,11 @@ html(lang="ru")
 
   body
     .wrapper.wrapper--inside
+      +b.decor.js-decor
+        +e('span')(data-maxRound="13").item.--n2
+        +e('span')(data-maxRound="8").item.--n3
+        +e('span')(data-maxRound="12").item.--n4
+        
       include includes/__header
 
       main.main
@@ -25,7 +30,7 @@ html(lang="ru")
 
           +b('section').services.--offer
             .container
-              +e.wrap
+              +e.wrap.js-scroll-anim
                 +e.row
                   +services-item([
                     {
@@ -60,7 +65,7 @@ html(lang="ru")
                     }
                   ])
               
-              +e.warning
+              +e.warning.js-scroll-anim
                 +e.warning-overico
                   +e('img')(src="static/img/warning-ico.png" alt="").warning-ico
 
@@ -68,7 +73,7 @@ html(lang="ru")
                   .text
                     p Наш курс по грудному вскармливанию не только для молодых и первородящих мам. Но также для всех, у кого ранее было короткое кормление грудью (до 6 месяцев), смешанное или искусственное вскармливание, для тех, кто считает себя представительницей «безмолочной породы» и так далее. Приходите обязательно!
                 
-              +e.conducts
+              +e.conducts.js-scroll-anim
                 +e('h3').conducts-title Курсы проводит
                 +e.conducts-row
                   +e.conducts-overimg
@@ -86,7 +91,7 @@ html(lang="ru")
                       
                       p А ещё Людмила Олеговна – просто большой профессионал, искренне любящий свою работу, и мама троих детей, готовая делиться, в том числе, и личным опытом. Знания, которые она даёт на своих семинарах – бесценны. Её поддержка и психологический настрой – колоссальный вклад в успешные роды и налаживание грудного вскармливания. И это уже неоднократно подтверждённый факт. 
 
-              +e.wrap
+              +e.wrap.js-scroll-anim
                 +e('h3').wrap-title.title Программы и стоимость
                 +e.row
                   +services-item([
@@ -132,7 +137,7 @@ html(lang="ru")
                     }
                   ])
               
-              +e.warning.--sert
+              +e.warning.--sert.js-scroll-anim
                 +e.warning-overico
                   +e('img')(src="static/img/warning-ico2.png" alt="").warning-ico
 
@@ -141,7 +146,7 @@ html(lang="ru")
                     p А если маленькое чудо растёт в животике вашего близкого человека – мы с удовольствием оформим красивый подарочный сертификат. Обращайтесь.
 
           .container.container--min
-            +b.info
+            +b.info.js-scroll-anim
               +e.wrap
                 +e('h3').title.title Бонусы и приятности
                 +e.content
@@ -151,8 +156,9 @@ html(lang="ru")
                       li Во-вторых, если у вас уже есть дети, берите старших с собой. Поверьте, им будет, чем заняться! К тому же это будет абсолютно бесплатно.
                       li В-третьих – и этого вы уж точно не ждали! – всем участницам семинара в подарок аквагрим на животике и фото!
 
-            .text
-              p(style="margin-top: 140px;") И главное. Будьте уверены – посетив любой из наших семинаров, вы ещё не раз скажете себе: «Какая же я молодец, что сходила на семинар к Людмиле Олеговне!» Не сомневайтесь, так и будет. Проверено на себе.
+            .common-wrap.js-scroll-anim
+              .text
+                p(style="margin-top: 140px;") И главное. Будьте уверены – посетив любой из наших семинаров, вы ещё не раз скажете себе: «Какая же я молодец, что сходила на семинар к Людмиле Олеговне!» Не сомневайтесь, так и будет. Проверено на себе.
               
             include includes/__feedback
 

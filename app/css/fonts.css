@@ -8,7 +8,7 @@
   font-weight: normal;
   font-style: normal;
 }
-
+/*
 @font-face {
   font-family: 'Arial';
   src: url('../../../../static/fonts/Arial-Black.eot');
@@ -19,7 +19,7 @@
   font-weight: 900;
   font-style: normal;
 }
-
+*/
 @font-face {
   font-family: 'Fregat';
   src: url('../../../../static/fonts/Fregat.eot');

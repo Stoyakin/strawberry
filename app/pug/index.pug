@@ -1,93 +1,67 @@
 include includes/bemto/bemto.pug
-include includes/__mixins.pug
 
 doctype html
 html(lang="ru")
-  - var title = "Главная"
+  - var title = "Земляника"
   include includes/__head
 
+  style(type='text/css').
+    .page-list{
+      display: inline-block;
+      vertical-align: top;
+      width: 48%;
+      margin: 30px 0 0 !important;
+    }
+    .page-list-item{
+      margin: 0 0 7px !important;
+    }
+    .page-list-item:before{
+      display: none;
+      content: none;
+    }
+    .page-list-item a {
+      font-size: 18px !important;
+      line-height: 24px !important;
+    }
+
   body
-    .wrapper
-      include includes/__header
+    .wrapper.wrapper--inside
+      +b.decor.js-decor
+        +e('span')(data-maxRound="9").item--n1
+        +e('span')(data-maxRound="13").item.--n2
+        +e('span')(data-maxRound="8").item.--n3
+        +e('span')(data-maxRound="12").item.--n4
+        +e('span')(data-maxRound="16").item.--n5
         
+      +b('header').header
+        .container
+          +e.row
+            +e('a')(href="/").logo
+              +e('span').logo-overimg
+                +e('img')(src="static/img/logo.png").logo-img
+              +e('span').logo-title Для активных детей и заботливых родителей
+
       main.main
-        +b('section').ihead
-          +b.decor.js-decor
-            +e('span')(data-maxRound="9").item--n1
-            +e('span')(data-maxRound="13").item.--n2
-            +e('span')(data-maxRound="8").item.--n3
-            +e('span')(data-maxRound="12").item.--n4
-            +e('span')(data-maxRound="16").item.--n5
+        .main__content
           .container
-            +e.row
-              +e.info
-                +e('h1').title Здравствуйте <br>и давайте сразу знакомиться!
-                +e.text
-                  p Вы, вероятнее всего, родитель подрастающего принца или принцессы, а может, даже не одного. Бабушка, дедушка и неравнодушный педагог – вас мы тоже приветствуем на нашем сайте. И обязательно приглашаем в гости.
+            .text
+              ul.page-list(style="display:inline-block;vertical-align:top;width:45%;margin-right:35px;")
+                li.page-list-item
+                  a(target="_blank" href="main.html") Главная
+                li.page-list-item
+                  a(target="_blank" href="inside_default-page.html") Типовая
+                li.page-list-item
+                  a(target="_blank" href="inside_news.html") Новости
+                li.page-list-item
+                  a(target="_blank" href="inside_news-page.html") Новость - внутренняя
+                li.page-list-item
+                  a(target="_blank" href="inside_services.html") Услуги - День рождения
+                li.page-list-item
+                  a(target="_blank" href="inside_services-room.html") Услуги - Посещение игровой комнаты
+                li.page-list-item
+                  a(target="_blank" href="inside_services-seminar.html") Услуги - Семинары для мам
+                li.page-list-item
+                  a(target="_blank" href="inside_contacts.html") Контакты
 
-                  p Игровая комната «Земляника» — это, прежде всего, приятная атмосфера и комфортное пространство для активного отдыха ваших детей и максимально беззаботного отдыха для вас самих. Лабиринт с горкой и батутом, огромная рогатка, игрушки ручной работы и другие развлечения, наверняка, понравятся маленьким гостям «Земляники». Вы, тем временем, можете выпить чашечку чая в уютной кухне, воспользоваться нашим wi-fi или даже почитать понравившуюся книгу с высокой родительской полки. И, конечно, у нас можно ярко и весело отметить день рождения вашего ребенка!
-
-              +e.overimg
-                span(style="background-image: url('static/img/sh-back.png')")
-
-        +b('section').iserv.js-scroll-anim
-          .container
-            +e.title.title Выберите услугу
-            +e.row
-              +e('a')(href="#").item
-                +e('span').item-overimg
-                  +e('img')(src="static/img/serv-img.png" alt="").item-img
-                +e('span').item-title Посещение<br>игровой комнаты
-
-              +e('a')(href="#").item
-                +e('span').item-overimg
-                  +e('img')(src="static/img/serv-img2.png" alt="").item-img
-                +e('span').item-title Детские<br>дни рождения 
-
-              +e('a')(href="#").item
-                +e('span').item-overimg
-                  +e('img')(src="static/img/serv-img3.png" alt="").item-img
-                +e('span').item-title Семинары для будущих и настоящих мам
-
-        +b('section').igall.js-scroll-anim
-          .container
-            .swiper-container.js-igall-swiper
-                .swiper-wrapper
-                    .swiper-slide
-                      +e('a')(href="static/img/gallery-img.jpg").overimg
-                        +e('img')(src="static/img/gallery-img.jpg" alt="").img
-                    .swiper-slide
-                      +e('a')(href="static/img/gallery-img.jpg").overimg
-                        +e('img')(src="static/img/gallery-img.jpg" alt="").img
-                    .swiper-slide
-                      +e('a')(href="static/img/gallery-img.jpg").overimg
-                        +e('img')(src="static/img/gallery-img.jpg" alt="").img
-            .swiper-buttons
-              .swiper-button-prev
-              .swiper-button-next
-                
-        +b('section').inews.js-scroll-anim
-          .container
-            +e.title.title Наши новости
-            +e.row
-              +e('article').item
-                +e.item-top
-                  +e('time').item-date 01.11
-                    span 2018
-                  +e('a')(href="#").item-title 
-                    span В Копейске появится новая игровая комната
-                +e('p').item-descr Дорогие мамы, папы, бабушки и дедушки! В недалёком будущем в Копейске появится новая детская игровая комната. Мы уже заказали лабиринт с батутом, нашли помещение в самом центре города, и сейчас бдительно следим за ходом его ремонта. 
-
-              +e('article').item
-                +e.item-top
-                  +e('time').item-date 15.11
-                    span 2018
-                  +e('a')(href="#").item-title 
-                    span Каким будет наш лабиринт
-                +e('p').item-descr Мы, конечно, очень хотели сделать как можно больше наполнения для нашей игровой из натуральных материалов и ручной работы, но как же без лабиринта, горки и батута!
-              
-            +e('a')(href="#").more-btn.btn.--circle Смотреть больше новостей
-
-      include includes/__footer
-
-
+      script(type="text/javascript" src="static/js/vendor.js")
+      script(type="text/javascript" src="static/js/own.js")

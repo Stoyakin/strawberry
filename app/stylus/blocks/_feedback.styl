@@ -7,6 +7,32 @@
   @media $desktopMax
     margin-top 50px
 
+  &.start-animate
+    .feedback__item
+      opacity 1
+      top 0
+
+      &:nth-child(2)
+        transition-delay .3s
+
+        &:before
+          transition-delay .3s
+
+      &:nth-child(3)
+        transition-delay .6s
+
+        &:before
+          transition-delay .6s
+
+      &:before
+        transition transform .6s
+        transform translate(-50%, -50%) scale(1)
+
+      &:hover
+        &:before
+          transition transform .4s
+          transform translate(-50%, -50%) scale(1.1)
+
   &__row
     display flex
     justify-content space-between
@@ -39,6 +65,9 @@
     border-radius 50%
     padding-top 11px
     z-index 1
+    opacity 0
+    top 70px
+    transition opacity .5s, top .5s
 
     @media $desktopMax
       width 174px
