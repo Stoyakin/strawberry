@@ -1,6 +1,13 @@
 .publ
   position relative
   margin-top -25px
+  padding-top 145px
+
+  @media $desktopMax
+    padding-top 125px
+
+  @media $tLandscapeMax
+    padding-top 75px
 
   &__date
     display block
@@ -32,6 +39,7 @@
       padding 20px 11px
 
     @media $tLandscapeMax
+      top 0
       width 50px
       height 50px
       font-size 11px
@@ -40,3 +48,13 @@
 
     span
       display block
+
+  .text
+    & > figure:first-child
+      margin-top -145px !important
+
+      @media $desktopMax
+        margin-top -125px !important
+
+      @media $tLandscapeMax
+        margin-top -60px !important

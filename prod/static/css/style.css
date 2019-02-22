@@ -3983,6 +3983,19 @@ textarea.warning + .field-wrap__label {
 .publ {
   position: relative;
   margin-top: -25px;
+  padding-top: 145px;
+}
+
+@media (max-width: 1439px) {
+  .publ {
+    padding-top: 125px;
+  }
+}
+
+@media (max-width: 1239px) {
+  .publ {
+    padding-top: 75px;
+  }
 }
 
 .publ__date {
@@ -4021,6 +4034,7 @@ textarea.warning + .field-wrap__label {
 
 @media (max-width: 1239px) {
   .publ__date {
+    top: 0;
     width: 50px;
     height: 50px;
     font-size: 11px;
@@ -4031,6 +4045,22 @@ textarea.warning + .field-wrap__label {
 
 .publ__date span {
   display: block;
+}
+
+.publ .text > figure:first-child {
+  margin-top: -145px !important;
+}
+
+@media (max-width: 1439px) {
+  .publ .text > figure:first-child {
+    margin-top: -125px !important;
+  }
+}
+
+@media (max-width: 1239px) {
+  .publ .text > figure:first-child {
+    margin-top: -60px !important;
+  }
 }
 
 .contacts {
