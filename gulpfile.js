@@ -243,12 +243,12 @@ gulp.task(
   'js-vendor',
   js(
     [
+      src.app.js + 'ext/polyfill.js',
       src.app.js + 'ext/pace.min.js',
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/jquery-ui-dist/jquery-ui.min.js',
       'node_modules/jquery-migrate/dist/jquery-migrate.min.js',
       'node_modules/systemjs/dist/system.js',
-      'node_modules/babel-polyfill/dist/polyfill.js',
       'node_modules/swiper/dist/js/swiper.js',
       src.app.js + 'ext/TweenMax.min.js',
       //'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
