@@ -151,6 +151,16 @@
       pointer-events none
       z-index 1
 
+    &:after
+      @extend .after
+      left -3px
+      top -3px
+      width calc(100% - 2px)
+      height calc(100% - 2px)
+      border 4px solid #fff
+      pointer-events none
+      z-index 2
+
 .ymaps-2-1-72-copyrights-pane,
 .ymaps-2-1-72-map-copyrights-promo
   display none

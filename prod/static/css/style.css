@@ -1513,6 +1513,7 @@ body.open-menu .decor--mobile {
 .text h4:not([class]):before,
 .text h5:not([class]):before,
 .text figure:not([class]):before,
+.text figure:not([class]):after,
 .btn--circle:before,
 .main__title:before,
 .header__address:before,
@@ -1524,7 +1525,9 @@ body.open-menu .decor--mobile {
 .ihead__title:before,
 .iserv__item:before,
 .igall__overimg:before,
+.igall__overimg:after,
 .contacts__map:before,
+.contacts__map:after,
 .services__item-title:before,
 .services__conducts-title:before,
 .services__conducts-overimg:before,
@@ -1555,6 +1558,7 @@ body.open-menu .decor--mobile {
 .text h4:not([class]):before,
 .text h5:not([class]):before,
 .text figure:not([class]):before,
+.text figure:not([class]):after,
 .btn--circle:before,
 .main__title:before,
 .header__address:before,
@@ -1566,7 +1570,9 @@ body.open-menu .decor--mobile {
 .ihead__title:before,
 .iserv__item:before,
 .igall__overimg:before,
+.igall__overimg:after,
 .contacts__map:before,
+.contacts__map:after,
 .services__item-title:before,
 .services__conducts-title:before,
 .services__conducts-overimg:before,
@@ -1780,6 +1786,15 @@ body.open-menu .decor--mobile {
   z-index: 2;
 }
 
+.text figure:not([class]):after {
+  left: -3px;
+  top: -3px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 4px solid #fff;
+  z-index: 2;
+}
+
 .text figcaption:not([class]) {
   color: #333;
   font-size: 15px;
@@ -1795,9 +1810,10 @@ body.open-menu .decor--mobile {
 }
 
 .text img:not([class]) {
-  margin: 15px 0;
+  margin: 15px auto;
   max-width: 100%;
   margin-left: 0;
+  height: auto !important;
 }
 
 .text * + img:not([class]) {
@@ -3574,6 +3590,8 @@ textarea.warning + .field-wrap__label {
 @media (max-width: 767px) {
   .iserv__item {
     width: 100%;
+    max-width: 320px;
+    margin-bottom: 130px;
   }
 }
 
@@ -3750,6 +3768,15 @@ textarea.warning + .field-wrap__label {
   height: 101%;
   background: url("../../static/img/border-gallery.png") no-repeat center;
   background-size: 100% 100%;
+  z-index: 2;
+}
+
+.igall__overimg:after {
+  left: -3px;
+  top: -3px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 4px solid #fff;
   z-index: 2;
 }
 
@@ -4272,6 +4299,16 @@ textarea.warning + .field-wrap__label {
   background-size: 100% 100%;
   pointer-events: none;
   z-index: 1;
+}
+
+.contacts__map:after {
+  left: -3px;
+  top: -3px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 4px solid #fff;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .ymaps-2-1-72-copyrights-pane,

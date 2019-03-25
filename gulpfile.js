@@ -143,7 +143,7 @@ function js(src, dst, fileName) {
       }))
       .pipe(print())
       .pipe($.concat(fileName))
-      //.pipe($.uglify())
+      .pipe($.uglify())
       .pipe($.sourcemaps.write('./'))
       .pipe(gulp.dest(dst))
       .pipe($.notify({
